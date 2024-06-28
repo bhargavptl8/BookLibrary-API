@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "1f09b57d-7127-4de2-9066-32397d0aaa0b",
+		"name": "BookLibrary(API)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33141734"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bhargav123@gmail.com\",\r\n    \"password\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bhargav123@gmail.com\",\r\n    \"password\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookCategory",
+			"item": [
+				{
+					"name": "BookCategory-Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookCategoryName",
+									"value": "Cartoon",
+									"type": "text"
+								},
+								{
+									"key": "bookCategoryImage",
+									"type": "file",
+									"src": "/C:/Users/patel/Downloads/movies.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/bookcategory/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"bookcategory",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookCategory-Find",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/bookcategory/Find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"bookcategory",
+								"Find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookCategory-Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/bookcategory/delete/66658ecd43b151a8ca8067a9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"bookcategory",
+								"delete",
+								"66658ecd43b151a8ca8067a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookCategory-Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookCategoryName",
+									"value": "Movies",
+									"type": "text"
+								},
+								{
+									"key": "bookCategoryImage",
+									"type": "file",
+									"src": "/C:/Users/patel/Downloads/myw3schoolsimage.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/bookcategory/update/66658ecd43b151a8ca8067a9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"bookcategory",
+								"update",
+								"66658ecd43b151a8ca8067a9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookLibrary",
+			"item": [
+				{
+					"name": "Books-Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookName",
+									"value": "Bahubali Part-1",
+									"type": "text"
+								},
+								{
+									"key": "bookImage",
+									"type": "file",
+									"src": "/C:/Users/patel/Downloads/bahubalipart-1.jpg"
+								},
+								{
+									"key": "bookPdf",
+									"type": "file",
+									"src": "/C:/Users/patel/Downloads/download.pdf"
+								},
+								{
+									"key": "bookCategory",
+									"value": "6665b8d1aca8e0cf6a7ca7ef",
+									"type": "text"
+								},
+								{
+									"key": "bookAuthor",
+									"value": "xyz",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/booklibrary/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"booklibrary",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books-Find",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/booklibrary/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"booklibrary",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books-Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/booklibrary/delete/6665a4a37cc24bf20ef485ac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"booklibrary",
+								"delete",
+								"6665a4a37cc24bf20ef485ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books-Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjU0OGE5MDZkODIzMzkzZjdmMmZkOCIsImlhdCI6MTcxNzkyMDE3OX0.bcgoyxRbgCwQWojWGKv3zyviqHPB9zSon4GXWMiwQnA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookName",
+									"value": "Bahubali Part-1",
+									"type": "text"
+								},
+								{
+									"key": "bookImage",
+									"type": "file",
+									"src": "/C:/Users/patel/Downloads/bahubalipart-1.jpg"
+								},
+								{
+									"key": "bookPdf",
+									"type": "file",
+									"src": "/C:/Users/patel/Downloads/download.pdf"
+								},
+								{
+									"key": "bookCategory",
+									"value": "6665b8d1aca8e0cf6a7ca7ef",
+									"type": "text"
+								},
+								{
+									"key": "bookAuthor",
+									"value": "xyz",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/booklibrary/update/6665ba871bd59ad018f06bd4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"booklibrary",
+								"update",
+								"6665ba871bd59ad018f06bd4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Landing",
+			"item": [
+				{
+					"name": "BookCategory-Find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/landing/bookcategory/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"landing",
+								"bookcategory",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookLibrary-Find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/landing/booklibrary/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"landing",
+								"booklibrary",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViewCount-Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/landing/viewcount/update/6665ba871bd59ad018f06bd4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"landing",
+								"viewcount",
+								"update",
+								"6665ba871bd59ad018f06bd4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
